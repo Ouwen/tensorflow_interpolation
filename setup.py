@@ -21,11 +21,11 @@ from setuptools import find_packages
 from setuptools import setup
 from setuptools.dist import Distribution
 
-__version__ = '0.0.1'
+__version__ = '0.1.0'
 REQUIRED_PACKAGES = [
-    'tensorflow >= 1.12.0',
+    'tensorflow >= 1.9.0',
 ]
-project_name = 'tensorflow-zero-out'
+project_name = 'tensorflow-regular-interp'
 
 
 class BinaryDistribution(Distribution):
@@ -38,9 +38,9 @@ class BinaryDistribution(Distribution):
 setup(
     name=project_name,
     version=__version__,
-    description=('TensorFlow ZeroOut is a simple custom op for TensorFlow'),
-    author='Google Inc.',
-    author_email='opensource@google.com',
+    description=('TensorFlow RegularInterp is a simple custom op for TensorFlow that performs grid interpolation'),
+    author='@ouwen, @dfm',
+    author_email='ouwen.huang@duke.edu',
     # Contained modules and scripts.
     packages=find_packages(),
     install_requires=REQUIRED_PACKAGES,
@@ -64,5 +64,5 @@ setup(
         'Topic :: Software Development :: Libraries',
     ],
     license='Apache 2.0',
-    keywords='tensorflow custom op machine learning',
+    keywords='tensorflow grid interpolation',
 )

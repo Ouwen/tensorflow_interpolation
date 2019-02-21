@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ============================================================================
-"""Tests for zero_out ops."""
+"""Tests for regular_interp ops."""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -20,15 +20,15 @@ from __future__ import print_function
 import numpy as np
 
 from tensorflow.python.platform import test
-from zero_out_ops import zero_out
+from regular_interp_ops import regular_interp
 
 
-class ZeroOutTest(test.TestCase):
+class RegularInterpTest(test.TestCase):
 
-  def testZeroOut(self):
+  def testRegularInterp(self):
     with self.test_session():
-      self.assertAllClose(
-          zero_out([[1, 2], [3, 4]]).eval(), np.array([[1, 0], [0, 0]]))
+      self.assertAllClose(regular_interp([[1.0, 2.0]], [1.0, 2.0], [1.5])[0].eval(), 1.5)
+      self.assertAllClose(regular_interp([[1.0, 2.0]], [1.0, 2.0], [1.5])[1].eval(), np.array([1.0]))
 
 
 if __name__ == '__main__':

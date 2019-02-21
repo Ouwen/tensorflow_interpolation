@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ============================================================================
-"""Use zero_out ops in python."""
+"""Use regular_interp ops in python."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -21,6 +21,6 @@ from __future__ import print_function
 from tensorflow.python.framework import load_library
 from tensorflow.python.platform import resource_loader
 
-zero_out_ops = load_library.load_op_library(
-    resource_loader.get_path_to_datafile('_zero_out_ops.so'))
-zero_out = zero_out_ops.zero_out
+regular_interp_ops = load_library.load_op_library(
+    resource_loader.get_path_to_datafile('_regular_interp_ops.so'))
+regular_interp = regular_interp_ops.regular_interp

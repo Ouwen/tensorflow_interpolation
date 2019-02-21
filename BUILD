@@ -5,6 +5,6 @@ sh_binary(
         "LICENSE",
         "MANIFEST.in",
         "setup.py",
-        "//tensorflow_zero_out:zero_out_py",
+        "//tensorflow_regular_interp:regular_interp_py",
     ],
 )
