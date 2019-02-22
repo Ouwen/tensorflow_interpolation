@@ -25,7 +25,7 @@ rm .bazelrc
 if python -c "import tensorflow" &> /dev/null; then
     echo 'using installed tensorflow'
 else
-    pip install tensorflow==1.9.0
+    pip install tensorflow
     pip install tensorflow_estimator
 fi
 
